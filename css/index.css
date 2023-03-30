@@ -95,6 +95,11 @@ main {
     margin: auto;
 }
 
+.platform a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .platform img {
     width: 200px;
 }
