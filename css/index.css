@@ -50,6 +50,11 @@ header .header-content {
     width: 100px;
 }
 
+.header-content .hlogo {
+    display: inline-block;
+    width: 350px;
+}
+
 .presents {
     font-size: 2em;
     margin-top: auto;
