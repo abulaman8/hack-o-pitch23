@@ -16,6 +16,20 @@ body {
     color: whitesmoke;
 }
 
+nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Robotic;
+    text-shadow: 0 0 7px green;
+    color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
 header {
     height: 100vh;
     width: 100vw;
