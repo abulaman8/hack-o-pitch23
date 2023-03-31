@@ -372,8 +372,8 @@ footer h3 {
     background-color: #2f363e;
     padding: 2rem;
     border-radius: 5px;
-    max-width: 300px;
-    height: 350px;
+    max-width: 450px;
+    height: 560px;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -400,6 +400,11 @@ footer h3 {
     line-height: 22px;
     text-align: center;
     margin-top: 2rem;
+}
+
+footer .old {
+    width: 200px;
+    height: auto;
 }
 
 
