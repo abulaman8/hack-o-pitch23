@@ -20,6 +20,8 @@
     margin-bottom: 30px;
     color: #fff;
     animation: flicker-1 1.5s infinite alternate;
+    display: flex;
+    justify-content: center;
 }
 
 @font-face {
@@ -69,15 +71,14 @@ header {
     margin-bottom: 20vh;
 }
 
-
-/* header canvas {
+header canvas {
     position: absolute;
     top: 0;
     left: 0;
-} */
+}
 
 header .header-content {
-    /* z-index: 10; */
+    z-index: 10;
     margin-top: 3rem;
 }
 
@@ -372,8 +373,8 @@ footer h3 {
     background-color: #2f363e;
     padding: 2rem;
     border-radius: 5px;
-    max-width: 450px;
-    height: 560px;
+    max-width: 400px;
+    height: 360px;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;

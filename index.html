@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/timeline.min.css">
     <link rel="shortcut icon" href="img/favicon_v3.ico" type="image/x-icon">
 
-    <title>Document</title>
+    <title>Hack-O-Pitch 2.0 | IITM Paradox'23 | Bootcamps + 36 hour Hackathon</title>
     <style>
         #navbar a {
             color: white;
@@ -132,13 +132,16 @@
 <body>
     <nav id="navbar" class="main-nav">
 
-        <a href="index.html"><img width="150px" src="img/hackopitch2_logo_v4_transparent.png" alt="HOME" ALIGN=CENTER></a>
+        <a href="index.min.html"><img width="150px" src="img/hackopitch2_logo_v4_transparent.png" alt="HOME" ALIGN=CENTER></a>
 
         <button class="menu-btn">
             <div class="bar"></div>
         </button>
 
         <ul class="menu-list nav-hidden">
+            <li class="menu-item">
+                <a href="index.html#about">ABOUT</a>
+            </li>
             <li class="menu-item">
                 <a href="index.html#faq">FAQS</a>
             </li>
@@ -148,33 +151,33 @@
             <li class="menu-item">
                 <a href="index.html#sponsors">SPONSORS</a>
             </li>
-            <li class="menu-item">
-                <a href="index.html#about">ABOUT</a>
-            </li>
+            <!-- <li class="menu-item">
+                <a href="teams.min.html">Our Team</a>
+            </li> -->
             <li class="menu-item dropdown">
                 <a href="#" role="button"></a>
             </li>
         </ul>
 
     </nav>
-    <header id="net">
-        <!-- <canvas id="matrix"></canvas> -->
+    <header>
+        <canvas id="matrix"></canvas>
 
         <!-- <h1 class="title">Hack-0-Pitch 2.0</h1> -->
         <div class="header-content">
             <div class="header-line1"><img class="logo" src="img/Paradox'23 Logo_small.png" alt=""> <span class="presents">presents</span></div>
             <img class="hlogo" src="img/hackopitch2_logo_v4_transparent.png" alt="">
-            <h1>Bootcamp &</h1>
+            <h1>Bootcamps &</h1>
             <h1>36 hour Hackathon</h1>
             <h2>Indian Institute of Technology Madras,
             </h2>
             <h3>Chennai, Tamil Nadu - 600036</h3><br>
-            <div class="apply-button" data-hackathon-slug="hackopitch-iitm" data-button-theme="dark-inverted" style="height: 44px; width: 312px"></div>
+            <div class="apply-button" data-hackathon-slug="hackopitch23-iitm" data-button-theme="dark-inverted" style="height: 44px; width: 312px"></div>
         </div>
 
     </header>
     <main>
-        <h2 class="m-auto neonText" id="about">ABOUT HACK-O-PITCH</h2>
+        <h2 class="m-auto neonText" id="about">ABOUT HACK-O-PITCH 2.0</h2>
         <div class="container mt-5 mb-5 about">
             <p>Hack-O-Pitch is back with a bang!! We are organizing a Hackathon to encourage innovation and entrepreneurship among the BS community. Our Hackathon consists of 3 rounds: Ideation Round, Prototyping Round (online), and a 36-hour Grand Finale
                 at IITM Campus. Shortlisting after each round. We have a variety of pre-hackathon learning sessions in different domains.</p>
@@ -185,7 +188,7 @@
                 and the top three teams will be announced as winners. Jury might become the first people to invest if they really love your product app and find it interesting.</p>
         </div>
 
-        <h2 class="m-auto neonText">GLIMPSES</h2>
+        <!-- <h2 class="m-auto neonText">GLIMPSES</h2>
         <div class="container glimpses">
             <div class="carousel-box">
                 <div id="carousel1" class="carousel slide" data-ride="carousel">
@@ -216,7 +219,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <h2 class="m-auto neonText">
             THEMES TO HACK
@@ -337,7 +340,7 @@
                 <p>Internship & Referral opportunity</p>
             </div>
         </div>
-        <h2 class="m-auto neonText">MENTORS</h2>
+        <!-- <h2 class="m-auto neonText">MENTORS</h2>
         <div class="d-flex flex-wrap mt-5 mb-5 justify-content-center">
             <div class="mentor-card">
                 <img src="img/mentors/Ayon Roy.png" alt="">
@@ -400,7 +403,8 @@
                 <h6 class="mentor-comp">Microsoft</h6>
             </div>
 
-        </div>
+        </div> -->
+
 
         <h2 class="m-auto neonText" id="schedule">EVENT SCHEDULE</h2>
         <section class="timeline-section">
@@ -428,14 +432,14 @@
                     <div class="timeline-content">
                         <h3>Pre-Hackathons Learning Sessions ends
                         </h3>
-                        <p>Learning Bootcamps by mentors end </p>
+                        <p>Learning Bootcamps by mentors end. </p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">01ST APRIL, 2023</div>
+                    <div class="timeline-date">02nd APRIL, 2023</div>
                     <div class="timeline-content">
-                        <h3>Registration Starts</h3>
+                        <h3>Registration (Ideation Round) Starts</h3>
                         <p>You can register for the ideation round youself by visiting <a class="link" href="https://hackopitch-iitm.devfolio.co/">Devfolio</a> Platform </p>
                     </div>
                 </div>
@@ -444,7 +448,7 @@
                     <div class="timeline-date">28TH APRIL, 2023</div>
                     <div class="timeline-content">
 
-                        <h3>Registration ends</h3>
+                        <h3>Registration (Ideation Round) ends</h3>
                         <p>Last date for event Registration. </p>
 
                     </div>
@@ -455,7 +459,7 @@
                     <div class="timeline-content">
                         <h3>Prototyping round starts</h3>
 
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem dolores magnam, cupiditate numquam qui cum.</p>
+                        <p>Your prototype or simulation of your project will be considered in a meet. It will be done according to your given slots.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -464,7 +468,7 @@
                     <div class="timeline-content">
                         <h3>Prototyping round ends</h3>
 
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus animi, obcaecati ducimus ea nihil nostrum!</p>
+                        <p>Last day of presentation of your Prototype or Simulation.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -473,7 +477,7 @@
                     <div class="timeline-content">
                         <h3>Prototyping round results</h3>
 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi exercitationem cumque id consectetur. Itaque, inventore!</p>
+                        <p>Final Result announcement of last filtering round releases.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -482,7 +486,7 @@
                     <div class="timeline-content">
                         <h3>Grand Finale</h3>
 
-                        <p>36-Hour Hackathon. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime laudantium vitae dicta, impedit provident minima.</p>
+                        <p>A 36-Hour Hackathon. Top teams from the Prototyping Round will compete at the IITM campus.</p>
                     </div>
                 </div>
             </div>
@@ -490,10 +494,12 @@
 
         <h2 class="m-auto neonText" id="sponsors">PLATFORM SPONSORS</h2>
         <div class="d-flex flex-wrap mt-5 mb-5 p-5 justify-content-around platform">
-            <a href="https://devfolio.co/"><img class="img" src="img/Devfolio_Logo-White.svg" alt="Devfolio"></a>
+            <a href="https://devfolio.co/"><img class="img" src="img/Devfolio_Logo-White.svg" alt="DEVFOLIO LOGO"></a>
             <!-- <a href="https://tezos.com/"><img class="img" src="img/Tezos_Logo-White.png" alt="Tezos"></a> -->
-            <a href="https://polygon.technology/"><img class="img" src="img/Polygon_Logo-White.png" alt="Polygon"></a>
-            <a href="https://filecoin.io/"><img class="img" src="img/Filecoin_Logo_White.png" alt="Filecoin"></a>
+            <a href="https://polygon.technology/"><img class="img" src="img/Polygon_Logo-White.png" alt="POLYGON LOGO"></a>
+            <a href="https://filecoin.io/"><img class="img" src="img/Filecoin_Logo_White.png" alt="FILECOIN LOGO"></a>
+            <a href="https://replit.com/"><img class="img" src="img/Replit-light-background.png" alt="REPLIT LOGO"></a>
+            <a href="https://solana.com/"><img class="img" src="img/Solana Dark.png" alt="SOLANA LOGO"></a>
             <!-- <a href="https://celo.org/"><img id="celo" class="img" src="img/Celo_Logo_White.png" alt="Celo"></a> -->
         </div>
 
@@ -502,25 +508,19 @@
         </h2>
         <div class="testimonial-container">
             <div class="testimonial-content">
-                <iframe allow="fullscreen;" class="m-auto" width="320" height="170" src="https://www.youtube.com/embed/7mczJaebGho"></iframe>
-                <!-- <h3 class="m-auto">Lorem, ipsum.</h3> -->
-                <p class="m-auto">This winning team developed a revolutionary Model that uses AI and machine learning algorithms to help farmers increase their crop yields and profitability. Mainly they have build ML based weather forcasting model. Judges were impressed
-                    by their technical skills, creativity, and the practical application of their solution. The team also received recognition for their teamwork and collaboration throughout the hackathon. They exemplified the true spirit of Hack-O-Pitch,
-                    where participants not only competed but also learned from each other and worked together to create something extraordinary.</p>
+                <iframe title="winner" allow="fullscreen;" class="m-auto" width="320" height="170" src="https://www.youtube.com/embed/7mczJaebGho"></iframe>
+                <h3 class="m-auto">Winner</h3>
+                <h6 class="m-auto">Hack-O-Pitch | Paradox'22</h6>
             </div>
             <div class="testimonial-content">
-                <iframe allow="fullscreen;" class="m-auto" width="320" height="170" src="https://www.youtube.com/embed/MXSYuJOdLFI"></iframe>
-                <!-- <h3 class="m-auto">Lorem, ipsum.</h3> -->
-                <p class="m-auto">The team's solution was not only innovative but also had the potential to make a significant impact. Judges were impressed by their technical skills, creativity, and the practical application of their solution. Although this team did not
-                    take the grand prize, their efforts were recognized and applauded by the judges, as they demonstrated excellent teamwork and dedication throughout the competition. They exemplified the true spirit of Hack-O-Pitch, where participants
-                    not only competed but also learned from each other and worked together to create something extraordinary.</p>
+                <iframe title="runner up" allow="fullscreen;" class="m-auto" width="320" height="170" src="https://www.youtube.com/embed/StCXofD_iOw"></iframe>
+                <h3 class="m-auto">Runner Up</h3>
+                <h6 class="m-auto">Hack-O-Pitch | Paradox'22</h6>
             </div>
             <div class="testimonial-content">
-                <iframe allow="fullscreen;" class="m-auto" width="320" height="170" src="https://www.youtube.com/embed/StCXofD_iOw"></iframe>
-                <!-- <h3 class="m-auto">Lorem, ipsum.</h3> -->
-                <p class="m-auto">Their solution was impressive, the judges were particularly impressed with the team's commitment to sustainability and the potential impact of their solution. Although they did not take the grand prize, their innovative solution and hard
-                    work were commendable, and they received recognition for their efforts. We hope you enjoyed hearing about this team's inspiring journey and innovative solution. Congratulations to all the participants and organizers for making Hack-O-Pitch
-                    a successful event!</p>
+                <iframe title="2nd runner up" allow="fullscreen;" class="m-auto" width="320" height="170" src="https://www.youtube.com/embed/MXSYuJOdLFI"></iframe>
+                <h3 class="m-auto">2nd Runner Up</h3>
+                <h6 class="m-auto">Hack-O-Pitch | Paradox'22</h6>
             </div>
 
         </div>
@@ -533,7 +533,7 @@
             </div>
             <button class="accordion">What is the allowed team size?</button>
             <div class="panel">
-                <p>Form a team, comprising of minimum 1 and maximum 5 members (Only IITM BSC Students are allowed).</p>
+                <p>Form a team, comprising of minimum 1 and maximum 4 members (Only IITM BS Students are allowed).</p>
             </div>
             <button class="accordion">What If I don't have a team?</button>
             <div class="panel">
@@ -541,7 +541,7 @@
             </div>
             <button class="accordion">This is my first hackathon, Can I participate ?</button>
             <div class="panel">
-                <p>Of course you can! Experience does not matter till the time you have the zest to change the world. New comers are most welcome!</p>
+                <p>Of course you can! Experience does not matter till the time you have the zest to change the world. New comers are most welcome!. We are also providing Bootcamps on different domains. </p>
             </div>
             <button class="accordion">Are there any special prizes for girls?</button>
             <div class="panel">
@@ -549,12 +549,12 @@
             </div>
             <button class="accordion">Is it online or offline?</button>
             <div class="panel">
-                <p>The hackathon is online (6th - 8th May 2022). Only the Top 10 teams will be invited offline to pitch their ideas in front of our esteemed judges at IIT Madras Campus (22nd May 2022).</p>
+                <p>The hackathon is offline (24th - 25th May 2023). Only the Top 20 teams will be invited for this hackathon at IIT Madras Campus. These top-20 teams will be selected via two online rounds. i.e: Ideation & Prototyping Rounds</p>
             </div>
             <button class="accordion">What if I don't know how to code?</button>
             <div class="panel">
-                <p>That is not a problem! A great way to learn how to code is by attending a hackathon. You never know what new skill you might pick up! You can also ask specific questions to our mentors and in the
-                    <a class="link" href="https://telegram.me/+ceiUqANHQL4wYzU9">Telegram group</a>, where people are there to help. Plus we have planned numerous workshops and talks for you guys to make the learning process better.
+                <p>That is not a problem! A great way to learn how to code is by attending a hackathon. You always need to find out what new skill you might pick up! You can also ask specific questions to our mentors and in the
+                    <a class="link" href="https://telegram.me/+ceiUqANHQL4wYzU9">Telegram group</a>, where people are there to help. Plus, we have planned numerous workshops and talks for you guys to improve the learning process.
                 </p>
             </div>
             <button class="accordion">Are there any sponsored challenges and API prizes?</button>
@@ -569,7 +569,20 @@
             </div>
             <button class="accordion">What's in it for me?</button>
             <div class="panel">
-                <p>Cash Prizes for winners, Swags for top 10 teams, certificates and much much much more...Our website manager couldn't fit it in! Phew!</p>
+                <p>Cash Prizes for winners, Swags for top 10 teams, certificates and many more...Our website manager couldn't fit it in! Phew!</p>
+            </div>
+            <button class="accordion">Is there a pre-hackathon learning session?</button>
+            <div class="panel">
+                <p>Yes, there is a pre-hackathon learning session that is designed to provide participants with the necessary skills and knowledge to succeed in the event.</p>
+            </div>
+            <button class="accordion">Are all rounds of the event held online?</button>
+            <div class="panel">
+                <p>No, only the ideation and prototyping rounds will be held online. The grand finale round will take place in the campus of IIT Madras.
+                </p>
+            </div>
+            <button class="accordion">How will the event be judged?</button>
+            <div class="panel">
+                <p>The projects will be judged based on a variety of criteria, including originality, feasibility, market potential, and presentation.</p>
             </div>
         </div>
 
@@ -580,7 +593,7 @@
     <footer id="footer" class="container m-auto">
         <div class="d-flex justify-content-between">
             <h3>Have A Question?</h3>
-            <h3>Visit Hack-O-Pitch '22</h3>
+            <!-- <h3>Visit Hack-O-Pitch '22</h3> -->
         </div>
         <br>
         <div class="d-flex justify-content-between">
@@ -590,9 +603,9 @@
                 <a href="https://www.instagram.com/iitm_paradox/"><img src="img/ig.svg" alt="Instagram"></a>
                 <a href="https://sites.google.com/student.onlinedegree.iitm.ac.in/paradox22"><img src="img/web.png" alt="WEB"></a>
             </div>
-            <div class="hack22 d-flex flex-column justify-content-start">
-                <a href="https://abulaman8.github.io/Hack-O-Pitch/" target="_blank"><img class="old" src="img/hackopitch_old_logo.png" alt="hackopitch22"></a>
-            </div>
+            <!-- <div class="hack22 d-flex flex-column justify-content-start">
+                <a href="./hackopitch22/index.html" target="_blank"><img class="old" src="img/hackopitch_old_logo.png" alt="hackopitch22"></a>
+            </div> -->
         </div>
         <br>
         <div class="contact">
@@ -610,25 +623,11 @@
 
 
 
-    <script src="js/index.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/three.min.js"></script>
-    <script src="js/vanta.net.min.js"></script>
+    <script src="js/index.min.js"></script>
+    <script src="js/nav.min.js"></script>
+
     <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
-    <script>
-        VANTA.NET({
-            el: "#net",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: true,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0xf9ce47,
-            backgroundColor: 0x0b1221
-        })
-    </script>
+
 </body>
 
 </html>
