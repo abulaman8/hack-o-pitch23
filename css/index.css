@@ -27,11 +27,13 @@
 @font-face {
     font-family: Robotic;
     src: url(font/Robtronika-4Bq8p.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: Roboticbody;
     src: url(font/good_times.ttf);
+    font-display: swap;
 }
 
 body {
