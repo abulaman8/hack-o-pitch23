@@ -1,0 +1,614 @@
+@keyframes flicker-1 {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow: 0 0 4px #fff, 0 0 70px #ed1996ff, 0 0 80px #ed1996ff, 0 0 90px #ed1996ff;
+    }
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+#hackopitch-text {
+    margin-left: 22px;
+}
+
+header {
+    width: 100%;
+    color: white;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+}
+
+#content {
+    margin-top: 10px;
+    align-items: center;
+}
+
+.neonText {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #fff;
+    animation: flicker-1 1.5s infinite alternate;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    /* background-color: #010a01; */
+    background-color: black;
+    text-align: center;
+    font-weight: lighter;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    font-family: Robotic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 40px;
+    color: white;
+}
+
+@font-face {
+    font-family: Robotic;
+    src: url(font/Robtronika-4Bq8p.ttf);
+}
+
+@font-face {
+    font-family: Roboticbody;
+    src: url(font/good_times.ttf);
+}
+
+nav {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Robotic;
+    text-shadow: 0 0 7px green;
+    color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.one {
+    max-width: 100%;
+    margin-right: 17px;
+    text-align: left;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.two {
+    margin-left: 17px;
+    margin-top: 10%;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* -----------------------------------TIMER------------------------------------- */
+
+li {
+    display: inline-block;
+    font-size: 0.85em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 2rem;
+}
+
+.countdown {
+    position: absolute;
+    bottom: 40%;
+}
+
+@media all and (max-width: 768px) {
+    li {
+        font-size: 1.125rem;
+        padding: .35rem;
+    }
+    li span {
+        font-size: 1.375rem;
+    }
+    #hackopitch-text {
+        margin-left: 32px;
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    #footer {
+        text-align: left;
+        margin-left: 12px;
+        font-size: 1em;
+    }
+}
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 0px auto;
+}
+
+.btn {
+    text-decoration: none;
+    height: 2em;
+    max-width: 20rem;
+    background-color: white;
+    color: darkblue;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin: 25px auto;
+    margin-left: 30px;
+}
+
+h1,
+h2 {
+    margin-top: 0px;
+}
+
+.accordion {
+    font-family: Roboticbody;
+    color: cyan;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 75%;
+    border: 1px solid green;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: cyan;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    margin: 10px auto;
+    text-align: center;
+    padding: 0 18px;
+    background-color: black;
+    max-height: 0;
+    overflow: hidden;
+    width: 75%;
+    transition: max-height 0.2s ease-out;
+    align-self: auto;
+}
+
+.card {
+    margin: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    /* position: absolute; */
+    width: 290px;
+    height: 210px;
+    max-width: 100%;
+    transition: all 0.75s ease;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: rotateX(180deg);
+}
+
+#celo {
+    height: 80px;
+}
+
+.front,
+.back {
+    /* This part controls the flip */
+    backface-visibility: hidden;
+    /* Size and card position */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Appearance */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    box-shadow: 10px 10px 5px 0px rgba(2, 54, 22, 0.452);
+}
+
+.front {
+    background-color: #63d471;
+    background-image: radial-gradient(circle, #043716, #0f2c10, #132109, #101704, #080b00);
+    color: cyan;
+}
+
+.back {
+    transform: rotateX(180deg);
+    text-align: center;
+    background-color: darkslategray;
+    color: wheat;
+}
+
+.front p {
+    font-size: 0.8em;
+    margin: 8px auto;
+}
+
+.front img {
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+}
+
+.prbox {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 100px;
+}
+
+.sponsors {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 25px;
+}
+
+
+/* nav {
+    position: fixed;
+    top: 0%;
+} */
+
+.highlights .img {
+    width: 254px;
+    height: 60px;
+    display: inline-flex;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.link {
+    color: inherit;
+}
+
+.home_icon {
+    height: 75px;
+    width: 160px;
+}
+
+.logo {
+    margin-left: 25px;
+    width: 100px;
+    height: 100px;
+}
+
+hr {
+    color: darkgrey;
+    width: 85%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer {
+    text-align: left;
+    margin-left: 100px;
+    font-size: 1em;
+}
+
+footer p {
+    font-family: sans-serif;
+}
+
+footer a img {
+    height: 32px;
+    width: 32px;
+    display: inline-flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 35px;
+}
+
+.small-icons {
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+footer h3 {
+    margin-left: 15px;
+}
+
+.contact {
+    display: flex;
+}
+
+.copyright {
+    text-align: center;
+    justify-content: center;
+    color: gray;
+    font-size: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 40px;
+}
+
+.judges {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.judge-card {
+    max-width: 300px;
+    max-height: 540px;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 40px;
+    margin-top: 30px;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.judge-card p {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-style: italic;
+    padding-top: 8px;
+    color: turquoise;
+    text-shadow: 0 0 4px white, 0 0 30px teal, 0 0 60px teal;
+}
+
+.judge-card img {
+    border-radius: 50%;
+    max-width: 240px;
+    max-height: 240px;
+}
+
+.mentors {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.mentor-card {
+    max-width: 250px;
+    max-height: 450px;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.mentor-card p {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-style: italic;
+    padding-top: 8px;
+    color: turquoise;
+    text-shadow: 0 0 4px white, 0 0 30px teal, 0 0 60px teal;
+}
+
+.mentor-card img {
+    border-radius: 50%;
+    max-width: 210px;
+    max-height: 210px;
+    margin-top: 30px;
+}
+
+.profile-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.profile-icons img {
+    height: 21px;
+    width: 21px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 0%;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial-content {
+    background-color: #2f363e;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 400px;
+    height: 360px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.testimonial-content h3 {
+    font-size: 20px;
+    color: pink;
+    /* margin: 0 0 10px; */
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.testimonial-content p {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #c8c8c8;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 3rem;
+}
+
+.gallery-element {
+    /* background-color: deepPink; */
+    background-image: url('https://picsum.photos/260/145');
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #fff;
+    aspect-ratio: 9/5
+}
+
+.champions {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: 90vw;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.champion-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 1.5rem;
+}
+
+.champ-img {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    /* min-width: 480px;
+    min-height: 300px; */
+}
+
+.champ-img img {
+    max-width: 600px;
+    /* height: 335px; */
+    margin: auto;
+    /* object-fit: fill; */
+    /* aspect-ratio: 9/5; */
+}
+
+.champ-content {
+    width: 50%;
+    min-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.champ-content h3 {
+    font-size: 20px;
+    color: pink;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.champ-content p {
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.champ-link {
+    text-decoration: none;
+    color: #080b00;
+    background-color: pink;
+    padding: 1rem;
+    border-radius: 50px;
+    width: max-content;
+    margin: 10px auto
+}
+
+.champ-link:hover {
+    text-decoration: none;
+    background-color: deeppink;
+    color: #080b00;
+}
+
+.two-carousels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.carousel-item img {
+    aspect-ratio: 9/5;
+}
+
+
+/* * {
+    outline: limegreen 1px solid;
+} */

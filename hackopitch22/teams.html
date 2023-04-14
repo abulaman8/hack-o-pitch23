@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hack-O-Pitch | IITM Paradox'22 | Hackathon + B-Plan Competition</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src=https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script> -->
+    <script src="js/main.js"></script>
+    <link rel="shortcut icon" href="img/hackopitch_favicon-modified.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/teams.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+
+    <style>
+        #navbar a {
+            color: white;
+        }
+        
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .menu-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        
+        .menu-item:not(:last-child) {
+            margin-right: 1rem;
+        }
+        
+        .menu-item a,
+        .logo {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+        }
+        
+        .menu-btn {
+            display: none;
+            width: 35px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        .bar {
+            height: 3px;
+            background-color: #333;
+            margin: 0.5rem 0;
+        }
+        
+        .menu-btn::after,
+        .menu-btn::before {
+            content: '';
+            display: block;
+            height: 3px;
+            background-color: #333;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-list {
+            display: none;
+            border: 1px solid #ccc;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            border-radius: 4px;
+            padding: 0.75rem;
+            position: absolute;
+        }
+        
+        .show-dropdown {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dropdown-list a:not(:first-child) {
+            margin-top: 0.5rem;
+        }
+        
+        @media(max-width: 500px) {
+            .menu-btn {
+                display: block;
+            }
+            .main-nav {
+                flex-wrap: wrap;
+            }
+            .menu-list {
+                flex-basis: 100%;
+                flex-grow: 1;
+                flex-direction: column;
+            }
+            .menu-item {
+                margin-top: 0.5rem;
+            }
+            .nav-hidden {
+                display: none;
+            }
+            .dropdown-list {
+                border: none;
+                box-shadow: none;
+                padding: 0.75rem 0;
+                width: 100%;
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav id="navbar" class="main-nav">
+
+        <a href="index.html"><img width="120px" height="80px" src="img/hackopitch_logo.png" alt="HOME" ALIGN=CENTER></a>
+
+        <button class="menu-btn">
+            <div class="bar"></div>
+        </button>
+
+        <ul class="menu-list nav-hidden">
+            <li class="menu-item">
+                <a href="index.html#faq">FAQS</a>
+            </li>
+            <li class="menu-item">
+                <a href="index.html#schedule">SCHEDULE</a>
+            </li>
+            <li class="menu-item">
+                <a href="index.html#sponsors">SPONSORS</a>
+            </li>
+            <li class="menu-item">
+                <a href="teams.html">Our Team</a>
+            </li>
+            <li class="menu-item dropdown">
+                <a href="#" role="button"></a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <header id="halo">
+
+        <div class="contents">
+
+            <div class="one"><br>
+
+                <img class="logo" src="img/paradox_logo.png" alt="PARADOX 2022"> <span>Presents</span><br>
+
+
+
+
+                <h2>
+                    Hackathon + B-Plan <br>Competition <br>
+                </h2>
+
+                <h4>
+                    Indian Institute of Technology Madras,
+                    <br> Chennai, Tamil Nadu - 600036
+                </h4>
+
+
+                <div style="margin-left: 40px; color: #f70f0f;">
+                    <!-- <span>Only <b>IITM BSC Degree</b> Email Ids <br> are allowed for Registration.</span><br><br> -->
+                    <div class="apply-button" data-hackathon-slug="hackopitch-iitm" data-button-theme="dark-inverted" style="height: 44px; width: 312px"></div>
+                </div>
+
+                <br><br>
+
+
+            </div>
+        </div>
+
+    </header>
+    <br>
+
+
+    <h2 class="neonText">
+        Event Heads
+    </h2>
+    <div class="flex-box">
+
+
+
+
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/ankit.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Ankit Singh</h3>
+                <h4 class="title">Event Head</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1001955@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/asingh88029/" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/sachin.jpeg">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Sachin Singh</h3>
+                <h4 class="title">Event Head</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1003251@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/sachinsbaghel" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <h2 class="neonText">Core Team</h2>
+    <div class="flex-box">
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/ayush.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Ayush Gupta</h3>
+                <h4 class="title">Core Member</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:22f1001018@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ayush-gupta-4aba27205" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/manish.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Manish Bibhu</h3>
+                <h4 class="title">Core Member</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1001388@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/manishbibhu" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/aakash.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Aakashdeep Srivastava</h3>
+                <h4 class="title">Core Member</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f2000247@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/aakashdeep-1a2b3c/" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="neonText">
+        Dev Team
+    </h2>
+    <div class="flex-box">
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/ankit.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Ankit Singh</h3>
+                <h4 class="title">Dev Team</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1001955@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/asingh88029/" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/abulaman.jpeg">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Abul Aman</h3>
+                <h4 class="title">Dev Team</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1000506@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/abul-aman-67481a222" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/sachin.jpeg">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Sachin Singh</h3>
+                <h4 class="title">Dev Team</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1003251@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/sachinsbaghel" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="neonText">
+        Hosts
+    </h2>
+
+    <div class="flex-box">
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/kanika.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Kanika Varandani</h3>
+                <h4 class="title">Host</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f3000249@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/nithyashree.jpeg">
+            </div>
+            <div class="team-content">
+                <h3 class="name">S Nithyashree</h3>
+                <h4 class="title">Host</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1005680@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/nithyashree-srinivasan-b11a301b2" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <br><br><br>
+
+    <hr>
+
+    <footer id="footer">
+        <h3>Have A Question?</h3>
+        <a href="mailto:support@hackopitch.tech"><img src="img/mail.svg" alt="MAIL"></a>
+        <a href="https://telegram.me/+ceiUqANHQL4wYzU9"><img src="img/telegram.png" alt="TELEGRAM"></a>
+        <a href="https://www.instagram.com/iitm_paradox/"><img src="img/ig.svg" alt="Instagram"></a>
+        <a href="https://sites.google.com/student.onlinedegree.iitm.ac.in/paradox22"><img src="img/web.png" alt="WEB"></a>
+        <br>
+        <div class="contact">
+            <img class="small-icons" src="img/pin.svg" alt="" ALIGN=CENTER>
+            <p>Indian Institute of Technology Madras, Chennai, Tamil Nadu - 600036</p>
+        </div>
+        <div class="copyright">
+            <h6>All Copyright &copy; reserverd to Hack-O-Pitch IITM Paradox'22</h6>
+        </div>
+        <br> <br>
+    </footer>
+    </div>
+
+    <script src="./js/nav.js"></script>
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+        VANTA.RINGS({
+            el: "#halo",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0x0,
+            color: 0x341d7d
+        })
+    </script>
+</body>
+
+</html>

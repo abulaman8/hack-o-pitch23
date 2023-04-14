@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/teams.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="shortcut icon" href="img/favicon_v3.ico" type="image/x-icon">
+
+    <title>Document</title>
+    <style>
+        #navbar a {
+            color: white;
+        }
+        
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .menu-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        
+        .menu-item:not(:last-child) {
+            margin-right: 1rem;
+        }
+        
+        .menu-item a,
+        .logo {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+        }
+        
+        .menu-btn {
+            display: none;
+            width: 35px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        .bar {
+            height: 3px;
+            background-color: #333;
+            margin: 0.5rem 0;
+        }
+        
+        .menu-btn::after,
+        .menu-btn::before {
+            content: '';
+            display: block;
+            height: 3px;
+            background-color: #333;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-list {
+            display: none;
+            border: 1px solid #ccc;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            border-radius: 4px;
+            padding: 0.75rem;
+            position: absolute;
+        }
+        
+        .show-dropdown {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dropdown-list a:not(:first-child) {
+            margin-top: 0.5rem;
+        }
+        
+        nav {
+            background-color: transparent;
+        }
+        
+        @media(max-width: 500px) {
+            .menu-btn {
+                display: block;
+            }
+            .main-nav {
+                flex-wrap: wrap;
+            }
+            .menu-list {
+                flex-basis: 100%;
+                flex-grow: 1;
+                flex-direction: column;
+            }
+            .menu-item {
+                margin-top: 0.5rem;
+            }
+            .nav-hidden {
+                display: none;
+            }
+            .dropdown-list {
+                border: none;
+                box-shadow: none;
+                padding: 0.75rem 0;
+                width: 100%;
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar" class="main-nav">
+
+        <a href="index.html"><img width="150px" src="img/hackopitch2_logo_v4_transparent.png" alt="HOME" ALIGN=CENTER></a>
+
+        <button class="menu-btn">
+            <div class="bar"></div>
+        </button>
+
+        <ul class="menu-list nav-hidden">
+            <li class="menu-item">
+                <a href="index.html#about">ABOUT</a>
+            </li>
+            <li class="menu-item">
+                <a href="index.html#faq">FAQS</a>
+            </li>
+            <li class="menu-item">
+                <a href="index.html#schedule">SCHEDULE</a>
+            </li>
+            <li class="menu-item">
+                <a href="index.html#sponsors">SPONSORS</a>
+            </li>
+            <li class="menu-item dropdown">
+                <a href="#" role="button"></a>
+            </li>
+        </ul>
+
+    </nav>
+    <header id="header">
+
+        <!-- <h1 class="title">Hack-0-Pitch 2.0</h1> -->
+        <div class="header-content">
+            <div class="header-line1"><img class="logo" src="img/Paradox'23 Logo_small.png" alt=""> <span class="presents">presents</span></div>
+            <img class="hlogo" src="img/hackopitch2_logo_v4_transparent.png" alt="">
+            <h2>Bootcamps &</h2>
+            <h2>36 hour Hackathon</h2>
+            <h3>Indian Institute of Technology Madras,
+            </h3>
+            <h4>Chennai, Tamil Nadu - 600036</h4><br>
+            <div class="apply-button" data-hackathon-slug="hackopitch23-iitm" data-button-theme="dark-inverted" style="height: 44px; width: 312px"></div><br>
+            <small>Note: It is mandatory to register with Devfolio to participate</small>
+        </div>
+
+    </header>
+
+    <br>
+
+
+    <h2 class="neonText">
+        Event Heads
+    </h2>
+    <div class="flex-box">
+
+
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/shivamjha.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Shivam Kumar Jha</h3>
+                <h4 class="title">Event Lead</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:22f3000134@ds.study.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/geekyjha/" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/premkr.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Prem Kumar</h3>
+                <h4 class="title">Event Lead</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1000531@ds.study.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/prem-kumar-a499b1201" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <h2 class="neonText">Event Members</h2>
+    <div class="flex-box">
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/rupak.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Rupak Kumar</h3>
+                <h4 class="title">Event Core</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f2001183@ds.study.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/rupak-kumar-11a832204/" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <h2 class="neonText">
+        Dev Team
+    </h2>
+    <div class="flex-box">
+
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/abulaman.jpeg">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Abul Aman</h3>
+                <h4 class="title">Dev Team</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f1000506@student.onlinedegree.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/abul-aman-67481a222" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <h2 class="neonText">
+        Hosts
+    </h2>
+
+    <div class="flex-box">
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/kanika.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Kanika Varandani</h3>
+                <h4 class="title">Host</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:21f3000249@ds.study.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="our-team">
+            <div class="picture">
+                <img class="img-fluid" src="img/rashmi.png">
+            </div>
+            <div class="team-content">
+                <h3 class="name">Rashmi Kumari</h3>
+                <h4 class="title">Host</h4>
+            </div>
+            <ul class="social">
+                <li>
+                    <a href="mailto:22f3000322@ds.study.iitm.ac.in" class="fa fa-envelope" aria-hidden="true"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/rashmi-kumari-32bba71bb/" class="fa fa-linkedin" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <br><br><br>
+
+    <hr>
+
+    <footer id="footer" class="container m-auto">
+        <div class="d-flex justify-content-between">
+            <h3>Have A Question?</h3>
+            <h3>Visit Hack-O-Pitch '22</h3>
+        </div>
+        <br>
+        <div class="d-flex justify-content-between">
+            <div class="socials">
+                <a href="mailto:support@hackopitch.tech"><img src="img/mail.svg" alt="MAIL"></a>
+                <a href="https://telegram.me/+ceiUqANHQL4wYzU9"><img src="img/telegram.png" alt="TELEGRAM"></a>
+                <a href="https://www.instagram.com/iitm_paradox/"><img src="img/ig.svg" alt="Instagram"></a>
+                <a href="https://sites.google.com/student.onlinedegree.iitm.ac.in/paradox22"><img src="img/web.png" alt="WEB"></a>
+            </div>
+            <div class="hack22 d-flex flex-column justify-content-start">
+                <a href="./hackopitch22/index.html" target="_blank"><img class="old" src="img/hackopitch_old_logo.png" alt="hackopitch22"></a>
+            </div>
+        </div>
+        <br>
+        <div class="contact">
+            <img class="small-icons" src="img/pin.svg" alt="" ALIGN=CENTER>
+            <p>Indian Institute of Technology Madras, Chennai, Tamil Nadu - 600036</p>
+        </div>
+        <br>
+        <div class="copyright">
+            <h6>All Copyright &copy; reserverd to Hack-O-Pitch IITM Paradox'23</h6>
+        </div>
+        <br> <br>
+    </footer>
+
+
+
+
+    <script defer async src="js/index.min.js"></script>
+    <script src="js/nav.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" integrity="sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.rings.min.js" integrity="sha512-ThX7gjS2988F9N7hYwT2g5puQwj85J5pfQTOZXV15+92U1I69/ZIKh26RRNfB0IZmclKkavdHuSYRG1Cg1WToA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+
+    <script>
+        VANTA.RINGS({
+            el: "#header",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0x0b1221,
+            color: 0xf9ce47ff,
+            backgroundAlpha: 1
+        })
+    </script>
+
+</body>
+
+</html>
