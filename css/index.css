@@ -152,11 +152,23 @@ main {
     margin-top: 30px;
     margin-left: 15px;
     margin-right: 15px;
-    height: 250px;
-    width: 250px;
-    margin-bottom: 100px;
     text-align: center;
+    padding: 35px;
 }
+
+
+.prbox a{
+    color: gold;
+    text-decoration: underline;
+}
+
+
+
+.prbox img {
+    width: 250px;
+    margin-bottom: 15px;
+}
+
 
 .mentor-card {
     width: 280px;
